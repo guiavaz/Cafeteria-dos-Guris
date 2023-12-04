@@ -1,13 +1,25 @@
 #ifndef CAFETERIA_H
 #define CAFETERIA_H
 
-//Protótipo das funções
-void cadastraProduto();
+// Protótipo das funções
+void realizarVenda();
 
 void consultaProduto();
 
+void cadastraProduto();
+
 void excluiProduto();
 
-void criaOrcamento();
+void saidas();
+
+void relatorioDiario();
+
+void relatoriopersonalizado();
+
+void relatorioMesal();
+
+void relatorioAnual();
+
+void relatorioFinanceiro();
 
 #endif
