@@ -1,67 +1,70 @@
-#include<stdio.h>
-#include<stdlib.h>
 #include <locale.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
 #include "cafeteria.h"
 
-int main ()
-{
-    setlocale(LC_ALL, "Portuguese");
+int main() {
+  setlocale(LC_ALL, "Portuguese");
 
-    int option=0;
-    printf("-------Cafeteria dos Guris-------\n");
+  printf("-------Cafeteria dos Guris-------\n");
 
-    //Menu
-    while(option != 99)
-    {
-        printf("\nSelecione uma opção:\n\n");
-        printf("1- Cadastrar Produto\n");
-        printf("2- Consultar Produto\n");
-        printf("3- Excluir Produto\n");
-        printf("4- Orçamento\n");
-        printf("99- Sair\n\n");
+  int option = 0;
 
-        scanf("%i", &option);
+  do {
 
+    printf("\nSelecione uma opcao:\n\n");
+    printf("1- Realizar Venda\n");
+    printf("2- Consultar Produto\n");
+    printf("3- Cadastrar Produto\n");
+    printf("4- Excluir Produto\n");
+    printf("5- Saidas\n");
+    printf("6- Relatorio financeiro\n");
+    printf("99- Sair\n\n");
 
-        switch(option)
-        {
+    scanf("%i", &option);
 
-            case 1:
-                printf("Função não implementada!\n");
-            break;
+    switch (option) {
 
-            case 2:
-                printf("Função não implementada!\n");
-            break;
+    case 1:
+      realizarVenda();
+      getchar();
+      break;
 
-            case 3:
-                printf("Função não implementada!\n");
-            break;
+    case 2:
+      consultaProduto();
+      getchar();
+      break;
 
-            case 4:
-                printf("Função não implementada!\n");
-            break;
+    case 3:
+      cadastraProduto();
+      getchar();
+      break;
 
-            case 99:
-                printf("\nTem certeza que deseja sair?\n");
-                printf("1- Sim\n2- Não\n\n");
-                scanf("%i", &option);
-                if(option == 1)
-                {
-                    option=99;
-                    printf("Sistema encerrado!\n\n");
-                }
-                else
-                {
-                    getchar();
-                    break;
-                }
+    case 4:
+      excluiProduto();
+      getchar();
+      break;
 
-            break;
+    case 5:
+      saidas();
+      getchar();
+      break;
 
-            default:
-                printf("Entrada inválida!\n\n");
-            break;
-        }
+    case 6:
+      relatorioFinanceiro();
+      getchar();
+      break;
+
+    case 99:
+      printf("\nPrograma Encerrado!\n");
+      break;
+
+    default:
+      printf("Opcao invalida. Tente novamente.\n");
     }
+  } while (option != 99);
+
+  return 0;
 }
