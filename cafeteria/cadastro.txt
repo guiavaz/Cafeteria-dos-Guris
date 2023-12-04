@@ -1,0 +1,10 @@
+Cafe Espresso;101;2,50
+Cappuccino;102;4,99
+Latte Macchiato;103;5,50
+Muffin de Blueberry;202;3,99
+Sanduiche de Frango e Pesto;203;9,50
+Bolo de Cenoura com Cobertura de Chocolate;204;6,99
+Pao de Queijo;301;3,20
+Biscoitos de Chocolate e Amendoas;302;4,75
+Cha Verde;401;2,99
+Cha Preto;402;2,99
